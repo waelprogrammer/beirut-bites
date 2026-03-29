@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "routes": [
+    {
+      "src": "/styles.css",
+      "headers": { "Cache-Control": "public, max-age=31536000, immutable" },
+      "dest": "/styles.css"
+    },
+    {
+      "src": "/script.js",
+      "headers": { "Cache-Control": "public, max-age=31536000, immutable" },
+      "dest": "/script.js"
+    },
+    {
+      "src": "/(.*)",
+      "headers": { "Cache-Control": "public, max-age=0, must-revalidate" },
+      "dest": "/$1"
+    }
+  ]
+}
